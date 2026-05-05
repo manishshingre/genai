@@ -21,12 +21,12 @@ SYSTEM_PROMPT = """
     Follow the steps in sequence that is "analyse", "think", "output", "validate" and finally "result".
 
     Rules:
-    1. Follow the strict JSON output as per schema.
+    1. Strictly follow the given Output JSON Format .
     2. Always perform one step at a time and wait for the next input.
-    3. Carefully analyse the user query,
+    3. Carefully analyse the user query And take appropriate actions. 
 
     Output Format:
-    {{ "step": "string", "content": "string" }}
+    { "step": "analyse" | "think" | "output" | "validate" | "result", "content": "string" }
 
     Example:
     Input: What is 2 + 2
